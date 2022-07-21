@@ -34,7 +34,7 @@ public class Main {
         List<Cats> cats = mapper.readValue(response.getEntity().getContent(),
                 new TypeReference<>() {});
                     cats.stream().filter(value -> value.getUpvotes() != -1 && value.getUpvotes() > 0)
-                            .forEach(System.out::println); //value != null не работает из-за примитива int
+                            .forEach(System.out::println); //(value != null) не работает из-за примитива int
                                                      // поискав в интернет решил сравнивать с -1
 
 
